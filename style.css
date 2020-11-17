@@ -24,7 +24,7 @@ body {
 
 /* -- TYPOGRAPHY -- */
 h1 {
-  font-size: 4.624rem;
+  font-size: 4.11rem;
   font-family: 'Playfair Display', serif;
   margin: auto;
 }
@@ -35,9 +35,10 @@ h2 {
   margin: auto auto 20px auto;
 }
 
-h2.mv-title {
+p.mv-title {
   font-size: 2.887rem;
   font-family: 'Montserrat', sans-serif;
+  margin: auto auto 20px auto;
 }
 
 #trailer-headline {
@@ -223,13 +224,11 @@ image {
   display: none;
 }
 
-/* --- Responsive layout --- */ 
-/* Creates three equal columns that floats next to each other */
 .column1 {
   text-align: center;
   padding: 10px;
   height: auto; 
-  max-width: 33.33%;
+  max-width: 30%;
   background: #FF908A;
 }
 
@@ -278,6 +277,10 @@ align-content: center;
   .column1 {
     max-width: none;
   }
+
+  .column2{
+    max-width: none;
+  }
   .small-group {
     flex-direction: row;
   }
@@ -289,11 +292,83 @@ align-content: center;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
+  header {
+    padding-top: 20%;
+  }
+
+  .movie-image {
+    max-width: 200px;
+  }
+  
   h1 {
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 2.566rem;
+  }
+  
+  h2 {
+    font-size: 1.802rem;
+    margin: auto auto 20px auto;
+  }
+  
+  p.mv-title {
+    font-size: 2.027rem;
+    padding: 40px auto 20px auto;
+  }
+  
+  #trailer-headline {
+    max-width: 300px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.281rem;
     margin: auto;
   }
   
-}
+  h3 {
+    font-size: 1.424rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+  
+  p.main-p {
+    font-size: 1.125rem;
+    margin: 60px auto auto auto; /*space after title*/
+  }
+  
+  p.main-p1 {
+    margin: auto auto 10px auto; /*space before search bar*/
+  }
+  
+  p.main-b-p {
+    font-size: 1.125rem;
+    margin: auto auto auto auto; /*less space after title*/
+  }
+  
+  p.main-b {
+    font-size: 1.125rem;
+    margin: auto auto 10px auto; /*space before search bar*/
+  }
+
+  form {
+    max-width: 350px;
+  }
+  
+  input[type=text] {
+    font-size: 1.125rem;
+    width: 28vw;
+  }
+  
+  input[type=text]:hover {
+    width: 70%;
+    max-width: 350px;
+  }
+  
+  #search-button {
+    font-size: 1.125rem;
+  }
+
+  .error-message {
+    font-size: 1.125rem;
+    padding: 7%;
+   }
