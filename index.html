@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies: Worth Watching?</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <main class="big-group">
+        <!-- Backround Image on Welcome Page -->
+        <!-- Initial Welcome Page Text / Column 1-->
+        <header class="welcome-page" id="main-title">
+            <div class="item">
+                <h3>Welcome to</h3>
+                <h1><a href="index.html" id="ww-title" class="no-link-style">Worth Watching</a></h1>
+                <p id="p-1" class="main-p">Is that movie worth watching? </p>
+                <p id="p-2" class="main-p1">Let's find out!</p>
+                <form id="search-form">
+                    <input type="text" name="search-bar" id="search-bar" placeholder="Search movies..." required>
+                    <button type="submit" id="search-button" value="search">Go</button>
+                    <p id="js-error-message" class="error-message hidden"></p>
+                </form>
+            </div>
+        </header>
+
+        <!-- Column 2 - Movie Ratings and Description-->
+        <div class="small-group item">
+            <section id="movie-results" class=" hidden">
+
+                <div class="item2 column2">
+                    <h2 id="movie-title-and-img"></h2>
+                    <p id="movie-ratings"></p>
+                </div>
+                <div class="item2">
+                    <p id="movie-list"></p>
+                </div>
+
+            </section>
+
+
+        </div>
+
+        <!-- Column 3 - Movie Trailers -->
+        <div class="item">
+            <section id="trailer-results" class="column3 hidden">
+                <h2 id="trailer-headline">Interested in this movie?</h2>
+                <p class="trailer-paragraph">Watch a trailer below!</p>
+                <p id="trailer-list"></p>
+            </section>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="index.js"></script>
+    </main>
+</body>
+
+</html>

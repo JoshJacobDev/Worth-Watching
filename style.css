@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Raleway:wght@500&display=swap');
+/*  Font Families - Google Fonts
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #f8eae9;
+}
+
+/* -- TYPOGRAPHY -- */
+h1 {
+  font-size: 4.624rem;
+  font-family: 'Playfair Display', serif;
+  margin: auto;
+}
+
+h2 {
+  font-size: 3.653rem;
+  font-family: 'Raleway', sans-serif;
+  margin: auto auto 20px auto;
+}
+
+h2.mv-title {
+  font-size: 2.887rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#trailer-headline {
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.281rem;
+  margin: auto;
+}
+
+h3 {
+  font-size: 1.802rem;
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+}
+
+p {
+  font-size: 1.424rem;
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+}
+
+p.main-p {
+  font-size: 1.424rem;
+  font-family: 'Raleway', sans-serif;
+  margin: 60px auto auto auto; /*space after title*/
+  color: rgba(255, 255, 255, 0.733);
+}
+
+p.main-p1 {
+  margin: auto auto 10px auto; /*space before search bar*/
+  color: rgba(255, 255, 255, 0.733);
+}
+
+p.main-b-p {
+  font-size: 1.424rem;
+  font-family: 'Raleway', sans-serif;
+  margin: 30px auto auto auto; /*less space after title*/
+  color: black;
+}
+
+p.main-b-p1 {
+  font-size: 1.424rem;
+  font-family: 'Raleway', sans-serif;
+  margin: auto auto 10px auto; /*space before search bar*/
+  color:black;
+}
+
+p.trailer-paragraph {
+  margin: auto auto 30px auto;
+}
+
+p.trailer-titles {
+  margin: 25px auto auto auto;
+  font-weight: 600;
+  font-size: 1.266rem;
+}
+
+.ratings {
+  margin: auto;
+  max-width: 275px;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-size: 1.266rem;
+  border: solid rgb(201, 201, 201);
+}
+
+.mv-description {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+.error-message {
+  margin: 40px auto auto auto;
+  font-family: sans-serif;
+  font-size: 1.266rem;
+  padding: 7%;
+ }
+
+#trailer-list {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.125rem;
+  margin: auto auto auto auto;
+}
+
+/* Welcome Page - Title and 
+  Background Image Positioning */
+.welcome-page {
+  text-align: center;
+  color: white;
+}
+
+header {
+  background-image: url(images/theater-seats.jpg);
+  background-size: cover;
+  filter: brightness(60%);
+  -webkit-filter: brightness(200%);
+  -webkit-filter: saturate(150%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+}
+
+/* "Worth Watching" Title Link */
+a.no-link-style {
+  text-decoration: none;
+}
+
+a.no-link-style:link {color: white;}
+a.no-link-style:hover {color: white;}
+a.no-link-style:visited {color: white;}
+a.no-link-style:active {color: white;}
+
+a.black-link-style {
+  text-decoration: none;
+}
+
+a.black-link-style:link {color: black;}
+a.black-link-style:hover {color: black;}
+a.black-link-style:visited {color: black;}
+a.black-link-style:active {color: black;}
+
+
+/* Search Form */
+form {
+  max-width: 400px;
+  margin: auto auto 20px auto;
+}
+
+input[type=text] {
+  background-color:white;
+  font-size: 1.266rem;
+  font-family: 'Raleway', sans-serif;
+  width: 18vw;
+  border-radius: 4px;
+  border: 2px solid rgb(184, 8, 8);
+  padding: 5px;
+  transition: 1.5s;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type=text]:hover {
+  width: 70%;
+  outline: none;
+  max-width: 350px;
+}
+
+#search-button {
+  border-radius: 32px;
+  font-size: 1.266rem;
+  padding: 8px;
+  font-family: 'Playfair', sans-serif;
+  color: rgb(139, 9, 9);
+  background-color: white;
+  border: 2px solid rgb(184, 8, 8);
+  outline: none;
+}
+
+#search-button:active {
+  background-color: rgb(184, 8, 8);
+  border: rgb(184, 8, 8);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+::placeholder {
+  color:rgb(139, 9, 9);
+}
+ 
+/* Image sizing */
+image {
+  height: auto;
+  margin: auto;
+}
+
+.movie-image {
+  max-height: 350px;
+  margin: auto; 
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Responsive layout --- */ 
+/* Creates three equal columns that floats next to each other */
+.column1 {
+  text-align: center;
+  padding: 10px;
+  height: auto; 
+  max-width: 33.33%;
+  background: #FF908A;
+}
+
+.column2 {
+  text-align: center;
+  padding: 10px;
+  height: auto;
+}
+
+.column3 {
+  text-align: center;
+  padding: 60px 10px 10px 10px;
+  height: auto;
+}
+
+/* Makes the three columns stack on top of each other instead of next to each other */
+.big-group {
+display: flex;
+flex-direction: row;
+}
+
+main {
+  height: 100%;
+}
+
+.small-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+flex: 1;
+align-content: center;
+}
+
+.item2 {
+  flex: 1;
+  align-content: center;
+}
+
+@media screen and (max-width: 975px) {
+  .big-group {
+    flex-direction: column;
+  }
+
+  .column1 {
+    max-width: none;
+  }
+  .small-group {
+    flex-direction: row;
+  }
+
+  .item2 {
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin: auto;
+  }
+  
+}
