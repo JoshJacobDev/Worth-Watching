@@ -15,11 +15,11 @@ makes this possible.
 ## Screenshots
 Welcome/Landing Page:
 
-![Landing Page](/screenshots/landing-page.png)
+![Landing Page](/screenshots/landing-page.PNG)
 
 Main Page:
 
-![Main Page](/screenshots/main-page.png)
+![Main Page](/screenshots/main-page.PNG)
 
 ## API's
 
