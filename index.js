@@ -5,7 +5,11 @@ const omdbSearchUrl = 'https://www.omdbapi.com/';
 const youTubeApiKey = 'AIzaSyB3PboYRtBgCv8f7nRIdGrcENwunztc3nE'; //AIzaSyC6nCJGAQxIhNC12yb_h8Z74Qf3eZRsMn0
 const youTubeSearchUrl = 'https://www.googleapis.com/youtube/v3/search';
 
-/* Functions for omdb API */
+/* 
+    Functions for omdb API 
+*/
+
+// Movie ratings
 function displayRatings(responseJson) {
     let imdbMovieRating = responseJson.Ratings[0].Value;
     let rtMovieRating = responseJson.Ratings[1].Value;
@@ -21,6 +25,7 @@ function displayRatings(responseJson) {
     );
 }
 
+// Movie Description 
 function displayDescription(responseJson) {
     let moviePlot = responseJson.Plot;
     let movieYear = responseJson.Year;
@@ -40,24 +45,27 @@ function displayDescription(responseJson) {
     );
 }
 
+// Movie Title & Image
 function displayTitleAndImage(responseJson) {
     let movieTitle = responseJson.Title;
     let imdbImage = responseJson.Poster;
 
     $('#movie-title-and-img').append(`
-    <h2 class="mv-title">${movieTitle}</h2>
+    <p class="mv-title">${movieTitle}</p>
     <img src="${imdbImage}" alt="Movie Image" class="movie-image">
     `
     );
 }
 
+// Checks for errors & Calls on
+// movie display functions 
 function displayMovieResults(responseJson) {
     if (responseJson.Error) {
         $('#movie-results').addClass("hidden");
         $('.column3').addClass("hidden");
         $('#js-error-message').empty();
         $('#js-error-message').removeClass("hidden");
-            $('#js-error-message').html(`  
+        $('#js-error-message').html(`  
             <p>Sorry, ratings are unavailable for this movie.</p>
             <br>
             <p>Please try another movie!</p>
@@ -74,12 +82,14 @@ function displayMovieResults(responseJson) {
     }
 }
 
+// Formats omdb search query 
 function formatOmdbQuery(omdbParams) {
     const queryItems = Object.keys(omdbParams)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(omdbParams[key])}`)
     return queryItems.join('&');
 }
 
+// Fetch for omdb API 
 function findMovies(searchedMovie) {
     const omdbParams = {
         apiKey: omdbApiKey,
@@ -117,7 +127,11 @@ function findMovies(searchedMovie) {
         })
 }
 
-/* Functions for YouTube API */
+/* 
+    Functions for YouTube Data API 
+*/
+
+// Trailer title and video player
 function displayTrailerResults(responseJson2) {
     $('#trailer-results').removeClass('hidden');
     console.log(responseJson2);
@@ -137,12 +151,14 @@ function displayTrailerResults(responseJson2) {
     };
 }
 
+// Formats YouTube search query
 function formatYouTubeQuery(youTubeParams) {
     const queryItems = Object.keys(youTubeParams)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(youTubeParams[key])}`)
     return queryItems.join('&');
 }
 
+// Fetch for YouTube API
 function findTrailers(searchedMovie) {
     let movieSearch = searchedMovie + "trailer";
     const youTubeParams = {
@@ -171,7 +187,7 @@ function findTrailers(searchedMovie) {
         })
 }
 
-// Transition from main page to column format
+// Transitions from main page to column format
 function homeToMainPage() {
     $('#main-title').removeClass("welcome-page");
     $('.home-bckgrnd-image').addClass("hidden");
@@ -184,6 +200,7 @@ function homeToMainPage() {
     $('#p-2').addClass("main-b-p1");
 }
 
+// Watches for form submission
 function watchForm() {
     $('#search-form').submit(event => {
         event.preventDefault();
