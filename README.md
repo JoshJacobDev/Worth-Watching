@@ -1,10 +1,37 @@
-# api-capstone-project
+# Worth-Watching
 
-Why spend an hour or two watching something you may have had no real interest in? 
+Why spend an hour and a half watching a movie you had no real interest in? 
 
-I wanted to help users find a great movie! Users have the 
-ability to look up movie ratings using omdb's API. Trailers 
-related to the search will also be displayed to help the 
-user make their final decision on a movie.
+Worth Watching was designed to help users find a great movie! 
+Users have the ability to look up movie ratings using OMDB's API. 
+Trailers related to the search will also be displayed to help the 
+user make their final movie decision. The Youtube Data API helps 
+makes this possible.
 
-[API Capstone Project](https://jocelle23.github.io/api-capstone-project)
+## Live Demo
+
+[Worth Watching](https://jocelle23.github.io/worth-watching)
+
+## Screenshots
+Welcome/Landing Page:
+
+![Landing Page](screenshots/landing-page.png)
+
+Main Page:
+
+![Main Page](screenshots/main-page.png)
+
+## API's
+
+* [OMDB API](http://www.omdbapi.com/)
+* [YouTube Data API](https://developers.google.com/youtube/v3)
+
+## Technologies Used
+
+* HTML/CSS
+* Javascript/jQuery
+
+## Features
+
+* Search movies to obtain movie information (rating, genre, director, etc.)
+* Play trailers related to movie search
