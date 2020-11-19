@@ -10,7 +10,7 @@ makes this possible.
 
 ## Live Demo
 
-[Worth Watching](https://jocelle23.github.io/worth-watching)
+[Worth Watching](https://jocelle23.github.io/Worth-Watching/)
 
 ## Screenshots
 Welcome/Landing Page:
